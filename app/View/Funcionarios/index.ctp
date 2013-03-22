@@ -8,9 +8,11 @@
     </tr>
 
 
-    <?php foreach ($funcionarios as $funcionario){ ?>
+    <?php 
+    $cont = 1;
+    foreach ($funcionarios as $funcionario){ ?>
     <tr>
-        <td><?php echo $funcionario['Funcionario']['id']; ?></td>
+        <td><?php echo $cont; $cont++ ?></td>
         <td>
             <?php echo $this->Html->link($funcionario['Funcionario']['nome'], array('action' => 'view', $funcionario['Funcionario']['id']));?>
                 </td>
