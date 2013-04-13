@@ -4,4 +4,4 @@
 
 <p>Sexo: <?php echo $funcionario['Funcionario']['sexo'] == 'm' ? 'Masculino' : 'Feminino'?></p>
 
-<p>Data de cadastro: <?php echo $this->Time->format('d/m/Y', $funcionario['Funcionario']['created'])?></p>
+<p>Data de cadastro: <?php echo date('d/m/Y H:i', strtotime(date('Y-m-d h:i:s', $funcionario['Funcionario']['created']->sec))); ?></p>
